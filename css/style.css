@@ -1,0 +1,607 @@
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url('../fonts/Montserrat-Regular.eot');
+	src: local('☺'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat-Bold';
+	src: url('../fonts/Montserrat-Bold.eot');
+	src: local('☺'), url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.ttf') format('truetype'), url('../fonts/Montserrat-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.ttf')  format('truetype'), url('../fonts/OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Bold.woff') format('woff'), url('OpenSans-Bold.ttf')  format('truetype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*reset*/
+* {vertical-align: baseline; font-family: inherit;font-style: inherit; font-size: 100%; border: none; padding: 0; margin: 0;}
+body {padding: 0px;}
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, ul, ol, dl {margin: 20px 0;}
+/*li, dd, blockquote {margin-left: 40px;}*/
+table {border-collapse: collapse; border-spacing: 0;}
+/*reset end*/
+/*style*/
+body{
+    color: #616161!important;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat-Regular';
+    font-size: 16px;
+    width: 100%;
+    overflow-x: hidden;
+}
+body a{
+    color: #616161;
+}
+a, button{
+    transition: .5s;
+}
+section .before-heading, footer .before-heading{
+    color: #bdbdbd;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+section .before-heading+h2, footer .before-heading+h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: #212121;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-family: 'Montserrat-Regular';
+}
+footer .before-heading,footer .before-heading+h2{
+    text-align: left;
+}
+    /*navbar*/
+nav{
+    font-family: 'Montserrat-Regular';
+    font-size: 16px;
+    background: #fff;
+    height: 70px;
+    -webkit-box-shadow: 0px 1px 20px 0px rgba(71,71,71,1);
+    -moz-box-shadow: 0px 1px 20px 0px rgba(71,71,71,1);
+    box-shadow: 0px 1px 20px 0px rgba(71,71,71,1);
+}
+
+
+    }
+.nav.nav>li>a{
+    padding: 10px;
+}
+.navbar-header.navbar-header{
+    width: 180px;
+}
+.navbar-nav.navbar-nav{
+    float: right;
+}
+.navbar.navbar>.container .navbar-brand{
+    margin: 0;
+}
+.navbar-brand.navbar-brand{
+    padding: 0;
+    width: 180px;
+    line-height: 70px;
+    margin: 0;
+}
+.navbar-brand.navbar-brand>img{
+    vertical-align: middle;
+    display: inline-block;
+}
+.navbar-brand{
+    /*background: url(../images/layout.png) no-repeat center center;*/
+}
+.nav li a{
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 50px!important;
+}
+.nav li:last-child a{
+    padding-right: 0;
+}
+.nav.nav>li>a:hover,.nav.nav>li>a:focus{
+    background-color: transparent;
+    color: #000;
+}
+.mobile-menu{
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: #575757;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    margin-top: -15px;
+    display: none;
+}
+.mobile-menu .fa-times{
+    display: none;
+}
+.mobile-menu.active .fa-bars{
+    display: none;
+}
+.mobile-menu.active .fa-times{
+    display: block;
+}
+    /*container-slider-full*/
+.top-slider{
+    margin-top: 50px;
+    font-family: 'Montserrat-Regular';
+    position: relative;
+}
+.top-slider .slide{
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.top-slider .slick-arrow{
+    border: 2px solid #ff6e40;
+    width: 40px;
+    height: 40px;
+    font-size: 0px;
+    transition: .5s;
+}
+.top-slider .slick-arrow:hover{
+    background-color: #ff6e40;    
+}
+.top-slider .slick-prev{
+    left: 30px;
+    z-index: 2;    
+}
+.top-slider .slick-next{
+    right: 30px;
+    z-index: 2;
+}
+.top-slider .slick-prev:before{
+    content: '';
+    background: url(../images/sprite.png) 0 0;
+    width: 12px;
+    height: 19px;
+    display: block;
+    left: 50%;
+    margin-left: -6px;
+    margin: 0 auto;
+    opacity: 1;
+}
+.top-slider .slick-next:before{
+    content: '';
+    background: url(../images/sprite.png) -12px 0;
+    width: 12px;
+    height: 19px;
+    display: block;
+    left: 50%;
+    margin-left: -6px;
+    margin: 0 auto;
+    opacity: 1;
+}
+    /*slides*/
+.top-slider .slide-first{
+    background: url(../images/Rectangle%203%20copy.jpg);
+}
+.top-slider .slide-second{
+    background: url(../images/Rectangle%202%20copy.jpg);
+}
+    /*.top-slider .content-container*/
+.top-slider .content-container{
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.top-slider .content-container h4{
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.top-slider .content-container p{
+    font-family: 'OpenSans';
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 35px;
+}
+.top-slider button{
+    width: 190px;
+    height: 50px;
+    border: 2px solid #ff6e40;
+    box-sizing: border-box;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.top-slider button:hover{
+    background: #ff6e40;
+}
+.top-slider .slick-dots{
+    display: none!important;
+}
+/*section.about*/
+section.about{
+    padding: 100px 0;
+}
+section.about p{
+    padding-bottom: 25px;
+    line-height: 22px; 
+    text-align: center;
+    font-family: 'OpenSans';
+    font-size: 16px;
+    margin: 0;
+}
+section.about a{
+    border: 2px solid #212121;
+    box-sizing: border-box;
+    width: 190px;
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #212121;
+    display: block;
+    margin: 0 auto;
+    line-height: 46px;
+    text-transform: uppercase;
+}
+section.about a:hover{
+    color: #fff;
+    background-color: #212121;
+    text-decoration: none;
+}
+/*section.our-services*/
+section.our-services{
+    background: #f5f5f5;
+    padding: 100px 0;
+}
+section.our-services ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section.our-services li{
+    list-style:none;
+    width: 380px;
+    box-sizing: border-box;
+    margin-bottom: 35px;
+    position: relative;
+    padding-left: 100px;
+}
+section.our-services .icon{
+    width: 82px;
+    height: 82px;
+    background: url(../images/sprite.png) 0 -19px;
+    display: inline-block;
+    font-size: 48px;
+    line-height: 82px;
+    text-align: center;
+    color: #ff6e40;
+    margin-right: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+section.our-services h4{
+    padding: 0;
+    margin: 0;
+    padding-bottom: 5px;
+    color:  #212121;
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+}
+section.our-services span.text{
+    max-width: 280px;
+    line-height: 16px;
+    font-size: 16px;
+    text-align: left;
+    font-family: 'OpenSans';
+}
+/*section.subscribe*/
+section.subscribe{
+    padding: 40px 0;
+    background: #424242;
+}
+section.subscribe .container{
+    position: relative;
+}
+section.subscribe h2{
+    color:  #ffffff;
+    font-size: 22px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0;
+    padding-right: 280px;
+    box-sizing: border-box;
+}
+section.subscribe p{
+    font-family: 'OpenSans';
+    color:  #bdbdbd;
+    font-size: 16px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 20px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    padding-right: 280px;
+    box-sizing: border-box;
+}
+section.subscribe button{
+    border: 2px solid #ff6e40;
+    width: 280px;
+    height: 50px;
+    box-sizing: border-box;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+}
+section.subscribe button:hover{
+    background: #ff6e40;
+}
+/*section.our-works*/
+section.our-works{
+    padding: 100px 0;
+}
+section.our-works ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section.our-works li{
+    list-style:none;
+    width: 380px;
+    
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    position: relative;
+}
+section.our-works a{
+    display: block;
+    position: relative;
+    transition: .9s;
+}
+section.our-works .detail{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -100px;
+    background:  rgba(117, 117, 117, 0.7);
+    opacity: 0;
+    transition: .9s;
+}
+section.our-works a:hover .detail{
+    position: absolute;
+    transition: .9s;
+    left: 0;
+    opacity: 1;
+}
+section.our-works .go{
+    border-radius: 50%;
+    background-color:  #ff6e40;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    margin-left: -30px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+}
+section.our-works .text{
+    width: 100%;
+    height: 100px;
+    background-color:  #f4f4f4;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    text-align: center;
+}
+section.our-works .text .text-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+section.our-works .text h4{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color:  #ff6e40;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+section.our-works .text p{
+    font-family: 'OpenSans';
+    color:  #757575;
+    font-size: 16px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 20px;/* Приближение из-за подстановки шрифтов */
+    text-align: center;
+}
+/*contact*/
+footer{
+    background-color: #f5f5f5;
+    padding-top: 45px;
+    position: relative;
+}
+footer .icon{
+    border-radius: 50%;
+    background-color:  #ff6e40;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    display: inline-block;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    float: left;
+}
+footer span{
+    font-family: 'OpenSans';
+    font-size: 16px;
+}
+footer .contact .col-lg-3{
+    position: relative;
+    margin-bottom: 10px;
+}
+footer .contact .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+footer .dark-map{
+    height: 400px;
+    width: 100%;
+}
+footer .copyright{
+    min-height: 65px;
+}
+footer .copyright .col-lg-4{
+    height: 65px;
+    line-height: 65px;
+}
+footer .copy{
+    text-align: left;
+}
+footer .social ul{
+    text-align: center;
+}
+footer .social li{
+    display: inline-block;
+    list-style: none;
+}
+footer .social a{
+    color: #bdbdbd;
+    padding: 0 10px;
+}
+footer .social a:hover{
+    color: #575757;
+}
+footer .separator{
+    color: #ff6e40;
+    padding: 0 10px;
+}
+footer .privacy{
+    text-align: right;
+}
+footer .privacy li{
+    display: inline-block;
+    list-style: none;
+}
+footer .to-top{
+    position: absolute;
+    right: 30px;
+    bottom: 85px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ff6e40;
+}
+footer .to-top {
+    text-align: center;
+    background-repeat: no-repeat;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ff6e40;
+}
+footer .to-top:hover{
+    background: #ff6e40;
+    color: #fff;
+}
+@media (max-width: 1170px){
+    section.subscribe button{
+        width: 240px;
+    }
+    section.subscribe h2, section.subscribe p{
+        padding-right: 250px;        
+    }
+    section.our-services ul{
+        justify-content: space-around;
+    }
+    section.our-works li, section.our-works img{
+        width: 300px;
+    }
+}
+@media (max-width: 980px){
+    section.our-works ul{
+        justify-content: space-around;
+    }
+    footer .before-heading, footer .before-heading+h2{
+        text-align: center;
+    }
+    footer .copyright .col-lg-4{
+        text-align: center!important;
+    }
+}
+@media (max-width: 768px){
+    .nav{
+        width: 100%!important;
+        background: #f5f5f5;
+        position: absolute;
+        top: 65px;
+        text-align: center;
+        left: 15px;
+    }
+    .nav li{
+        border-bottom: 2px dashed #575757;
+        background: #f5f5f5;
+    }
+    .nav li a{
+        line-height: 30px;
+    }
+    .navbar.navbar>.container .navbar-brand{
+        margin-left: 30px;    
+    }
+    .mobile-menu{
+        display: block;
+    }
+    ul.nav{
+        display: none;
+    }
+    ul.nav.active{
+        display: block;        
+    }
+    .top-slider .content-container{
+        display: none;
+    }
+    section{
+        padding: 40px 0!important;
+    }
+    .slider-container-full{
+        padding: 0!important;
+    }
+    section.subscribe button{
+        position: relative;
+        margin-top: 30px;
+        margin: 0 auto;
+        display: block;
+    }
+    section.subscribe h2, section.subscribe p{
+        padding: 0 10px;
+    }
+}
